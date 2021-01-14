@@ -25,6 +25,19 @@ const waitlist = [];
 //EMAIL
 //ID
 
+app.post("/api/tables", function(req, res) {
+  if (tables > 5) {
+    app.post("/api/waitlist", function(req, res) {
+      const newWaitlist = req.body;
+      waitlist.push(newWaitlist);
+      console.log(newWaitlist);
+    });
+  } else {
+    const newTable = req.body;
+    tables.push(newTable);
+  }
+});
+
 //HTML ROUTES
 //ROUTE FOR HOME
 //ROUTE FOR TABLES
@@ -35,6 +48,6 @@ const waitlist = [];
 //CREATE TABLE/RESERVATION
 
 //LISTEN ON THE PORT
-app.listen(PORT, function () {
+app.listen(PORT, function() {
   console.log(`app listening on http://localhost:${PORT}`);
 });
