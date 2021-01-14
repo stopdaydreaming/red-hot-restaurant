@@ -24,6 +24,44 @@ const waitlist = [];
 //PHONE
 //EMAIL
 //ID
+const customers = [
+  {
+    name: "Mary",
+    phone: "555-555-2221",
+    email: "mary@email.com",
+    id: "23"
+  },
+  {
+    name: "Kate",
+    phone: "555-555-3901",
+    email: "kate@email.com",
+    id: "12"
+  },
+  {
+    name: "John",
+    phone: "555-555-2891",
+    email: "john@email.com",
+    id: "56"
+  },
+  {
+    name: "Isabel",
+    phone: "555-555-3189",
+    email: "isabel@email.com",
+    id: "06"
+  },
+  {
+    name: "Kurache",
+    phone: "555-555-8731",
+    email: "kurache@email.com",
+    id: "52"
+  },
+  {
+    name: "Pola",
+    phone: "555-555-7628",
+    email: "pola@email.com",
+    id: "33"
+  }
+];
 
 app.post("/api/tables", function(req, res) {
   if (tables > 5) {
@@ -40,12 +78,24 @@ app.post("/api/tables", function(req, res) {
 
 //HTML ROUTES
 //ROUTE FOR HOME
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "home.html"));
+});
 //ROUTE FOR TABLES
+app.get("/tables", function(req, res) {
+  res.sendFile(path.join(__dirname, "tables.html"));
+});
 //ROUTES FOR RESERVE
+app.get("/reserve", function(req, res) {
+  res.sendFile(path.join(__dirname, "reserve.html"));
+});
 
 //API ROUTES
 //GET ALL TABLE DATA
 //CREATE TABLE/RESERVATION
+app.get("/api/waitlist", function(req, res) {
+    return res.json(waitlist);
+});
 
 //LISTEN ON THE PORT
 app.listen(PORT, function() {
