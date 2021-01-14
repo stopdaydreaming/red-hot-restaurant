@@ -1,22 +1,30 @@
-//dependencies
-//1. express, 2.path
+//REQUIRE EXPRESS
 
-//Setup
-//setup express app
-//setup express app to handle data parsing
+//CREATE INSTANCE OF EXPRESS
 
-//Data
-//waiting list, table array
+//CREATE PORT FOR THE APP TO RUN
+//BUT ALSO LISTEN TO ENVIRONMENT VARIABLES SO WE CAN DEPLOY TO HEROKU
 
-// Routes
-// basic route
-// array of tables
-// waiting list
-// get methods
-// post method (waiting list and table)
-// /api :table or :waitlist
+//ADD MIDDLEWARE
+//COPY/PASTE FROM STAR WARS APP
 
-//start server to listen
+//CREATE AN ARRAY OF TABLES
+//CREAT AN ARRAY FOR WAITLIST
 
+//ARRAY OF OBJECTS. OBJECTS SHOULD HAVE
+//NAME
+//PHONE
+//EMAIL
+//ID
 
+//HTML ROUTES
+//ROUTE FOR HOME
+//ROUTE FOR TABLES
+//ROUTES FOR RESERVE
+
+//API ROUTES
+//GET ALL TABLE DATA
+//CREATE TABLE/RESERVATION
+
+//LISTEN ON THE PORT
 
