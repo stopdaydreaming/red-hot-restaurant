@@ -1,6 +1,5 @@
 //REQUIRE EXPRESS
 const express = require("express");
-// const path = require("path");
 
 //CREATE INSTANCE OF EXPRESS
 const app = express();
@@ -10,7 +9,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 //ADD MIDDLEWARE
-//COPY/PASTE FROM STAR WARS APP
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
